@@ -6,3 +6,12 @@ body {
 a {
   color: #00B7FF;
 }
+
+.material-icons.red { color: #fb0000; }
+.material-icons.blue { color: #006dfb; }
+.material-icons.green { color: #0f6e1c; }
+.material-icons.orange { color: #ff9900; }
+.material-icons.grey { color: #9b9a9a; }
+
+.material-icons.md-60 { font-size: 60px; }
+.material-icons.md-96 { font-size: 96px; }
