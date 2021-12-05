@@ -5,16 +5,12 @@ const User = require('../models/user');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.send('index');
+  res.send('users');
 });
 
 router.get('/register', (req, res) => {
   res.render('register');
 });
-
-router.get('/login', (req, res) => {
-  res.render('login');
-})
 
 router.get('/logout', (req, res) => {
   req.logout();
@@ -31,9 +27,14 @@ router.post('/register', async (req, res, next) => {
           res.redirect('/');
       })
   } catch (e) {
-      res.redirect('/register');
+      res.redirect('/users/register');
+      console.log(e);
   }
 });
+
+router.get('/login', (req, res) => {
+  res.render('login');
+})
 
 router.post('/login', passport.authenticate('local', { failureRedirect: '/users/login' }), (req, res) => {
   const redirectUrl = req.session.returnTo || '/';

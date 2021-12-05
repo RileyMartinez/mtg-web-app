@@ -12,17 +12,23 @@
             <%- include('partials/nav'); %>
         </header>
         <p><br></p>
-        <form action="/users/login" method="POST" class="form-signin validated-form" novalidate>
+        <form action="/users/login" method="POST" class="validated-form" novalidate>
             <span class="material-icons red mb-4 md-96">whatshot</span>
-            <span class="material-icons blue md-96">water</span>
-            <span class="material-icons green md-96">park</span>
-            <span class="material-icons orange md-96">light_mode</span>
-            <span class="material-icons md-96">masks</span>
             <h1 class="h3 mb-3 font-weight-normal">Welcome wizard, please sign in</h1>
-            <label for="inputUsername" class="sr-only">Username</label>
-            <input type="username" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
-            <label for="inputPassword" class="sr-only">Password</label>
-            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+            <div class="mb-3">
+                <label for="username" class="sr-only">Username</label>
+                <input type="text" id="username" name="username" class="form-control" placeholder="Username" required autofocus>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="sr-only">Password</label>
+                <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
             <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
         </form>
     </div>
