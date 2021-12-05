@@ -12,6 +12,10 @@ router.get('/register', (req, res) => {
   res.render('register');
 });
 
+router.get('/login', (req, res) => {
+  res.render('login');
+})
+
 router.get('/logout', (req, res) => {
   req.logout();
   res.redirect('/');
@@ -30,10 +34,6 @@ router.post('/register', async (req, res, next) => {
       res.redirect('/register');
   }
 });
-
-router.get('/login', (req, res) => {
-  res.render('login');
-})
 
 router.post('/login', passport.authenticate('local', { failureRedirect: '/users/login' }), (req, res) => {
   const redirectUrl = req.session.returnTo || '/';
