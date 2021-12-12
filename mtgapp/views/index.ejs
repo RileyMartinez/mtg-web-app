@@ -5,7 +5,7 @@
 	  <%- include('partials/head'); %>
   </head>
 
-  <body>
+  <body class="bg-secondary container-fluid">
     <header class="content-wrapper">
       <%- include('partials/nav'); %>
     </header>
@@ -16,7 +16,6 @@
         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
@@ -44,8 +43,22 @@
         <span class="sr-only">Next</span>
       </a>
     </div>
+
+    <!-- 16:9 aspect ratio -->
+      <div class="row no-gutters">
+        <div class="col embed-responsive embed-responsive-16by9 mb-100">
+          <video class="embed-responsive-item" controls src="/video/how_to_make_a_draft_deck.mp4"></video>
+        </div>
+        <div class="col embed-responsive embed-responsive-16by9 mb-100">
+          <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/726909943&color=%23000000&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/magicthegathering" title="Magic: The Gathering" target="_blank" style="color: #cccccc; text-decoration: none;">Magic: The Gathering</a> · <a href="https://soundcloud.com/magicthegathering/magic-the-gathering-theros-beyond-death-trailer-music-by-ramin-djawadi" title="Magic: The Gathering - Theros Beyond Death Trailer Music by Ramin Djawadi" target="_blank" style="color: #cccccc; text-decoration: none;">Magic: The Gathering - Theros Beyond Death Trailer Music by Ramin Djawadi</a></div>
+        </div>
+      </div>
+
+
     <!-- Footer -->
     <%- include('partials/footer'); %>
 
+  <!-- Scripts -->
+  <%- include('partials/scripts'); %>
   </body>
 </html>

@@ -6,35 +6,51 @@
     <%- include('partials/head'); %>
 </head>
 
-<body>
+<body class="container-fluid bg-secondary">
     <div class="container">
         <header class="content-wrapper">
             <%- include('partials/nav'); %>
         </header>
         <p><br></p>
-        <form action="/users/login" method="POST" class="validated-form" novalidate>
-            <span class="material-icons red mb-4 md-96">whatshot</span>
-            <h1 class="h3 mb-3 font-weight-normal">Welcome wizard, please sign in</h1>
+        <form action="#" method="POST" class="validated-form" novalidate>
+            <span class="material-icons red md-96">whatshot</span>
+            <h1 class="mb-3 font-weight-normal">Welcome wizard, please sign in</h1>
             <div class="mb-3">
                 <label for="username" class="sr-only">Username</label>
                 <input type="text" id="username" name="username" class="form-control" placeholder="Username" required autofocus>
                 <div class="valid-feedback">
-                    Looks good!
+                    Valid Username
+                </div>
+                <div class="invalid-feedback">
+                    Invalid Username
                 </div>
             </div>
             <div class="mb-3">
                 <label for="password" class="sr-only">Password</label>
                 <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
                 <div class="valid-feedback">
-                    Looks good!
+                    Valid Password
+                </div>
+                <div class="invalid-feedback">
+                    Invalid Password
                 </div>
             </div>
-            <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+            <button class="btn btn-lg btn-dark btn-block" type="submit">Sign in</button>
         </form>
     </div>
+    <div class="container-fluid px-0 mt-5">
+        <div class="row">
+          <img class="w-100 img-fluid" src="/img/carousel_3.png">
+      </div>
+      </div>
     <footer>
         <%- include('partials/footer'); %>
     </footer>
+
+    <!-- Scripts -->
+    <%- include('partials/scripts'); %>
 </body>
+
+
 
 </html>

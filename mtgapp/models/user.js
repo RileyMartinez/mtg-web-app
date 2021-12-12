@@ -7,6 +7,14 @@ const UserSchema = new Schema({
         type: String,
         required: true,
         unique: true
+    },
+    wins: { 
+        type: Number,
+        required: true
+    },
+    losses: { 
+        type: Number,
+        required: true
     }
 });
 

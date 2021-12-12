@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title><%= title %></title>
+	  <%- include('partials/head'); %>
+  </head>
+
+  <body class="bg-secondary container-fluid">
+    <header class="content-wrapper">
+      <%- include('partials/nav'); %>
+    </header>
+    <div id="bg">
+      <img src="/img/mana_wallpaper.png">
+    </div>
+  <div class="audio-container">
+    <audio controls autoplay src="/audio/mtg_arena_soundtrack_kaldheim.mp3" type="audio/mpeg"></audio>
+  </div>
+
+
+
+    <div id="container">
+      <div class="left">
+        <label id="YourName"><% if (!currentUser) { %> Your Life <% } else {%> <%- currentUser.username %> <% } %></label>
+        <div id="YourLife">
+          <div id="YourUp">▲</div>
+          <div id="YourCount">20</div>
+          <div id="YourDown">▼</div>
+        </div>
+        
+      </div>
+      <div class="right">
+        <label id="EnemyName">Versus</label>
+        <div id="EnemyLife">
+          <div id="EnemyUp">▲</div>
+          <div id="EnemyCount">20</div>
+          <div id="EnemyDown">▼</div>
+        </div>
+      </div>
+    </div>
+    <div id="reset" class="mb-100">↺</div>
+ 
+  <% if (currentUser) { %> 
+  <div id="container2">
+      <div class="left">
+        <div id="YourWins">
+          <div id="WinLabel">Wins</div>
+          <div id="WinCount"><%- currentUser.wins %></div>
+          <form action="/work/win" method="POST">
+            <input class="btn-success" type="submit" name="win" onclick="reloadThePage()" value="Record Win"/>
+          </form>
+        </div>
+      </div>
+      <div class="right">
+        <div id="YourLosses">
+          <div id="LossLabel">Losses</div>
+          <div id="LossCount"><%- currentUser.losses %></div>
+          <form action="/work/loss" method="POST">
+            <input class="btn-danger" type="submit" name="loss" onclick="reloadThePage()" value="Record Loss"/>
+          </form>
+        </div>
+        <% } %>
+
+      </div>
+    </div>
+
+
+        <!-- Footer -->
+        <%- include('partials/footer'); %>
+
+    <!-- Scripts -->
+    <%- include('partials/scripts'); %>
+    <script src="/js/lifeCounter.js"></script>
+    <script>
+      function reloadThePage(){
+          window.location.reload();
+      } 
+    </script>
+  </body>
+
+
+
+</html>

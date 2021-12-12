@@ -7,11 +7,311 @@ a {
   color: #00B7FF;
 }
 
+.audio-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.mb-100 { margin-bottom: 100px; }
+
 .material-icons.red { color: #fb0000; }
-.material-icons.blue { color: #006dfb; }
-.material-icons.green { color: #0f6e1c; }
+.material-icons.blue { color: #04b8ff; }
+.material-icons.green { color: #09df37; }
 .material-icons.orange { color: #ff9900; }
 .material-icons.grey { color: #9b9a9a; }
 
 .material-icons.md-60 { font-size: 60px; }
 .material-icons.md-96 { font-size: 96px; }
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+* {
+    -webkit-transition: opacity 0.1s ease-in-out;
+    -moz-transition: opacity 0.1s ease-in-out;
+    -o-transition: opacity 0.1s ease-in-out;
+    -ms-transition: opacity 0.1s ease-in-out;    
+    transition: opacity 0.1s ease-in-out;
+}
+
+#bg {
+  position:fixed; 
+	top:-50%; 
+	left:-50%; 
+	width:200%; 
+	height:200%;
+}
+
+#bg img {
+	position:absolute; 
+	top:0; 
+	left:0; 
+	right:0; 
+	bottom:0; 
+	margin:auto; 
+	min-width:50%;
+	min-height:50%;
+}
+
+#container {
+	font-size: 2.5em;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+	text-align: center;
+}
+
+#container2 {
+  font-size: 2.5em;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+	text-align: center;
+}
+
+.right { 
+	float: right;
+	width: 42.5%;
+	margin: 20px 5% 0 2.5%;	
+}
+
+.left {
+	float: left;
+	width: 42.5%;
+	margin: 20px 2.5% 0 5%;
+}
+
+label {
+	font-size: 0.8em;
+	display: block;
+	margin: 0 0 20px;
+	padding: 5px 0;
+	opacity: 0.9;
+	background-color: #EEE;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #EEE), color-stop(100%, #CCC));
+	background-image: -webkit-linear-gradient(top, #EEE, #AAA);
+	background-image: -moz-linear-gradient(top, #EEE, #AAA);
+	background-image: -ms-linear-gradient(top, #EEE, #AAA);
+	background-image: -o-linear-gradient(top, #EEE, #AAA);
+	background-image: linear-gradient(top, #EEE, #AAA);
+	border: 1px solid #999;
+	border-bottom: 1px solid #BBB;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	text-shadow: 0 1px 0 #EEE;
+	background-color: #EEE;
+}
+
+#YourLife {
+	opacity: 0.9;
+	background-color: #EEE;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #EEE), color-stop(100%, #CCC));
+	background-image: -webkit-linear-gradient(top, #EEE, #AAA);
+	background-image: -moz-linear-gradient(top, #EEE, #AAA);
+	background-image: -ms-linear-gradient(top, #EEE, #AAA);
+	background-image: -o-linear-gradient(top, #EEE, #AAA);
+	background-image: linear-gradient(top, #EEE, #AAA);
+	border: 1px solid #999;
+	border-bottom: 1px solid #BBB;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	color: #333;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+	padding: 8px 0;
+	text-align: center;
+	text-shadow: 0 1px 0 #EEE;
+}
+
+#YourWins {
+	opacity: 0.9;
+	background-color: #EEE;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #EEE), color-stop(100%, #CCC));
+	background-image: -webkit-linear-gradient(top, #EEE, #AAA);
+	background-image: -moz-linear-gradient(top, #EEE, #AAA);
+	background-image: -ms-linear-gradient(top, #EEE, #AAA);
+	background-image: -o-linear-gradient(top, #EEE, #AAA);
+	background-image: linear-gradient(top, #EEE, #AAA);
+	border: 1px solid #999;
+	border-bottom: 1px solid #BBB;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	color: #333;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+	padding: 8px 0;
+	text-align: center;
+	text-shadow: 0 1px 0 #EEE;
+}
+
+#WinLabel {
+  display: block;
+	text-align: center;
+	border-bottom: 1px solid #999;
+	padding: 10px 0;
+}
+
+#WinCount {
+	text-align: center;
+	font-size: 2em;
+}
+
+#WinIncrement {
+  display: block;
+	text-align: center;
+	border-bottom: 1px solid #999;
+	padding: 10px 0;
+}
+
+#YourLosses {
+	opacity: 0.9;
+	background-color: #EEE;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #EEE), color-stop(100%, #CCC));
+	background-image: -webkit-linear-gradient(top, #EEE, #AAA);
+	background-image: -moz-linear-gradient(top, #EEE, #AAA);
+	background-image: -ms-linear-gradient(top, #EEE, #AAA);
+	background-image: -o-linear-gradient(top, #EEE, #AAA);
+	background-image: linear-gradient(top, #EEE, #AAA);
+	border: 1px solid #999;
+	border-bottom: 1px solid #BBB;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	color: #333;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+	padding: 8px 0;
+	text-align: center;
+	text-shadow: 0 1px 0 #EEE;
+}
+
+#LossCount {
+  text-align: center;
+	font-size: 2em;
+}
+
+#LossLabel {
+  display: block;
+	text-align: center;
+	border-bottom: 1px solid #999;
+	padding: 10px 0;
+}
+
+#LossIncrement {
+  display: block;
+	text-align: center;
+	border-bottom: 1px solid #999;
+	padding: 10px 0;
+}
+
+#YourCount {
+	text-align: center;
+	font-size: 2em;
+
+}
+
+#YourUp {
+  display: block;
+	text-align: center;
+	border-bottom: 1px solid #999;
+	padding: 10px 0;
+}
+
+#YourDown {
+  display: block;
+	text-align: center;
+	border-top: 1px solid #999;
+	padding: 10px 0;
+}
+
+#EnemyLife {
+	opacity: 0.9;
+	background-color: #EEE;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #EEE), color-stop(100%, #CCC));
+	background-image: -webkit-linear-gradient(top, #EEE, #AAA);
+	background-image: -moz-linear-gradient(top, #EEE, #AAA);
+	background-image: -ms-linear-gradient(top, #EEE, #AAA);
+	background-image: -o-linear-gradient(top, #EEE, #AAA);
+	background-image: linear-gradient(top, #EEE, #AAA);
+	border: 1px solid #999;
+	border-bottom: 1px solid #BBB;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	color: #333;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+	padding: 8px 0;
+	text-align: center;
+	text-shadow: 0 1px 0 #EEE;
+
+}
+
+#EnemyCount {
+	text-align: center;
+	font-size: 2em;
+
+}
+
+#EnemyUp {
+  display: block;
+	text-align: center;
+	border-bottom: 1px solid #999;
+	padding: 10px 0;
+
+}
+
+#EnemyDown {
+  display: block;
+	text-align: center;
+	border-top: 1px solid #999;
+	padding: 10px 0;
+
+}
+
+#YourUp, #YourDown, #EnemyUp, #EnemyDown, #YourUp, #YourDown, #EnemyUp, #EnemyDown {
+	opacity: 0.5;
+}
+
+#reset {
+	display: block;
+	font-size: 7em;
+	line-height: 1.3em;
+	text-align: center;
+	height: 130px;
+	width: 130px;
+	position: fixed;
+	bottom: 0px;
+	right: 0px;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+	color: #333;
+	text-shadow: 0 1px 0 #EEE;
+	opacity: 0.9;
+	background-color: #EEE;
+
+	-webkit-border-top-left-radius: 30px;
+	-moz-border-radius-topleft: 30px;
+	border-top-left-radius: 30px;
+}
+
+#commander {
+	display: block;
+	height: 130px;
+	width: 130px;
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+  
+	font-size: 7em;
+	line-height: 1.3em;
+	text-align: center;  
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+	color: #333;
+	text-shadow: 0 1px 0 #EEE;
+	opacity: 0.9;
+	background-color: #EEE;
+
+	-webkit-border-top-right-radius: 30px;
+	-moz-border-radius-topright: 30px;
+	border-top-right-radius: 30px;
+}
