@@ -1,6 +1,7 @@
 body {
   padding-top: 25px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-family:  "Cardo", serif;
 }
 
 a {
@@ -15,6 +16,8 @@ a {
 }
 
 .mb-100 { margin-bottom: 100px; }
+
+.mb-90 { margin-bottom: 90px; }
 
 .material-icons.red { color: #fb0000; }
 .material-icons.blue { color: #04b8ff; }
@@ -59,14 +62,15 @@ a {
 }
 
 #container {
-	font-size: 2.5em;
-	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+	font-size: 4em;
+	font-family: 'Cardo', serif;
 	text-align: center;
+  font-style: bold;
 }
 
 #container2 {
   font-size: 2.5em;
-	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+	font-family: 'Cardo', serif;
 	text-align: center;
 }
 
@@ -119,7 +123,7 @@ label {
 	-moz-border-radius: 30px;
 	border-radius: 30px;
 	color: #333;
-	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+	font-family: "Cardo", serif;
 	padding: 8px 0;
 	text-align: center;
 	text-shadow: 0 1px 0 #EEE;
@@ -140,7 +144,7 @@ label {
 	-moz-border-radius: 30px;
 	border-radius: 30px;
 	color: #333;
-	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+	font-family: "Cardo", serif;
 	padding: 8px 0;
 	text-align: center;
 	text-shadow: 0 1px 0 #EEE;
@@ -180,7 +184,7 @@ label {
 	-moz-border-radius: 30px;
 	border-radius: 30px;
 	color: #333;
-	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+	font-family: 'Cardo', serif;
 	padding: 8px 0;
 	text-align: center;
 	text-shadow: 0 1px 0 #EEE;
@@ -240,7 +244,7 @@ label {
 	-moz-border-radius: 30px;
 	border-radius: 30px;
 	color: #333;
-	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+	font-family: 'Cardo', serif;
 	padding: 8px 0;
 	text-align: center;
 	text-shadow: 0 1px 0 #EEE;
@@ -275,7 +279,7 @@ label {
 
 #reset {
 	display: block;
-	font-size: 7em;
+	font-size: 6em;
 	line-height: 1.3em;
 	text-align: center;
 	height: 130px;
@@ -283,7 +287,7 @@ label {
 	position: fixed;
 	bottom: 0px;
 	right: 0px;
-	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+	font-family: 'C', sans-serif;
 	color: #333;
 	text-shadow: 0 1px 0 #EEE;
 	opacity: 0.9;
@@ -305,7 +309,7 @@ label {
 	font-size: 7em;
 	line-height: 1.3em;
 	text-align: center;  
-	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+	font-family: 'Cardo', serif;
 	color: #333;
 	text-shadow: 0 1px 0 #EEE;
 	opacity: 0.9;

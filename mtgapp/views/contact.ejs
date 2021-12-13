@@ -5,7 +5,7 @@
 	  <%- include('partials/head'); %>
   </head>
 
-  <body class="bg-secondary">
+  <body class="bg-secondary container-fluid">
     <div class="container">
         <header class="content-wrapper">
             <%- include('partials/nav'); %>
@@ -26,15 +26,15 @@
           </div>
           <div class="mb-3">
             <label for="textArea" class="sr-only">Feedback</label>
-            <textarea class="form-control is-invalid" name="textArea" id="textArea" placeholder="Send a message" required></textarea>
+            <textarea class="form-control" name="textArea" id="textArea" placeholder="Send a message" required></textarea>
             <div class="invalid-feedback">
               Feedback required to submit
             </div>
           </div>
             <button class="btn btn-lg btn-dark btn-block" type="submit">Submit</button>
         </form>
-    </div>
-    <div class="container-fluid px-0 mt-5">
+        </div>
+    <div class="container-fluid fixed-bottom px-0 mb-90">
       <div class="row">
         <img class="w-100 img-fluid" src="/img/carousel_2.png">
     </div>
@@ -46,5 +46,16 @@
 </body>
 
 <%- include('partials/scripts'); %>
+
+<script>
+  var canvas = document.getElementById('myCanvas');
+  var context = canvas.getContext('2d');
+  var imageObj = new Image();
+
+  imageObj.onload = function () {
+      context.drawImage(imageObj, 69, 50);
+  };
+  imageObj.src = '/img/kianne_dean_of_substance_art_card.png';
+</script>
 
 </html>
