@@ -18,6 +18,9 @@
             <li class="nav-item"><a href="/users/register" class="nav-link px-2 text-white">Register</a></li>
         <% } else {%>
             <li class="nav-item"><a href="/users/logout" class="nav-link px-2 text-white">Logout</a></li>
+            <% if(currentUser.username == "admin") {%>
+                <a class="nav-item nav-link px-2 text-info" href="/contact/feedback">Feedback</a>
+            <% } %>
         <% } %>
     </ul>
 </footer>
