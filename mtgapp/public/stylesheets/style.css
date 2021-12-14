@@ -15,6 +15,10 @@ a {
   margin-top: 50px;
 }
 
+.card-columns {
+    column-count: 2;
+  }
+
 .mb-100 { margin-bottom: 100px; }
 
 .mb-90 { margin-bottom: 90px; }
