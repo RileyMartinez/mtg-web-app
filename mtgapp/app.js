@@ -120,7 +120,8 @@ app.post('/contact/feedback', function(req, res) {
 }); 
 
 app.post('/work/win', (req, res) => {
-  User.findOneAndUpdate({ id: res.locals.currentUser.id }, { $inc: { wins: 1 } }, function(err, user) {
+  let currentUser = req.user;
+  User.findOneAndUpdate({ username: currentUser.username }, { $inc: { wins: 1 } }, function(err, user) {
     if (err) throw err;
     console.log(user);
   });
@@ -129,7 +130,8 @@ app.post('/work/win', (req, res) => {
 });
 
 app.post('/work/loss', (req, res) => {
-  User.findOneAndUpdate({ id: res.locals.currentUser.id }, { $inc: { losses: 1 } }, function(err, user) {
+  let currentUser = req.user;
+  User.findOneAndUpdate({ username: currentUser.username }, { $inc: { losses: 1 } }, function(err, user) {
     if (err) throw err;
     console.log(user);
   });
