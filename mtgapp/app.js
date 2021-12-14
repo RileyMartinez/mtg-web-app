@@ -21,9 +21,6 @@ var aboutRouter = require('./routes/about');
 var workRouter = require('./routes/work');
 var contactRouter = require('./routes/contact');
 var usersRouter = require('./routes/users');
-const data = require('./public/feedbackData.json');
-const { callbackify } = require('util');
-
 
 var app = express();
 
@@ -86,20 +83,7 @@ app.use('/work', workRouter);
 app.use('/contact', contactRouter);
 app.use('/users', usersRouter);
 
-//app.get('/contact/feedback', function(req, res) {
-  // Read feedback data to be used on feedback page
-  /*
-  fs.readFile('./public/feedbackData.json', (err, data) => {
-    if (err) throw err;
-    let feedback = JSON.parse(data);
-    app.locals.feedback = feedback;
-    console.log(app.locals.feedback);
-  });
-  */
-//});
-
-var feedbackDataFile = './public/feedbackData.json'
-
+var feedbackDataFile = './public/feedbackData.json';
 // Write feedback from to json file
 app.post('/contact/feedback', function(req, res) {
     // Get form data
