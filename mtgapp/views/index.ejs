@@ -45,15 +45,32 @@
     </div>
 
     <!-- 16:9 aspect ratio -->
-      <div class="row no-gutters">
-        <div class="col embed-responsive embed-responsive-16by9 mb-100">
-          <video class="embed-responsive-item" controls src="/video/how_to_make_a_draft_deck.mp4"></video>
-        </div>
-        <div class="col embed-responsive embed-responsive-16by9 mb-100">
-          <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/726909943&color=%23000000&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/magicthegathering" title="Magic: The Gathering" target="_blank" style="color: #cccccc; text-decoration: none;">Magic: The Gathering</a> · <a href="https://soundcloud.com/magicthegathering/magic-the-gathering-theros-beyond-death-trailer-music-by-ramin-djawadi" title="Magic: The Gathering - Theros Beyond Death Trailer Music by Ramin Djawadi" target="_blank" style="color: #cccccc; text-decoration: none;">Magic: The Gathering - Theros Beyond Death Trailer Music by Ramin Djawadi</a></div>
+    <div class="row">
+      <div class="col-md-6 mt-5">
+        <div class="card text-warning bg-dark" id="videoelement">
+          <div class="card-header font-weight-bold">
+            Draft Guide
+          </div>        
+          <div class="card-body text-light">
+            <div class="col embed-responsive embed-responsive-16by9 mb-100">
+              <video class="embed-responsive-item" controls src="/video/how_to_make_a_draft_deck.mp4"></video>
+            </div>
+          </div>
         </div>
       </div>
-
+      <div class="col-md-6 mt-5">
+        <div class="card text-warning bg-dark" id="audioelement">
+          <div class="card-header font-weight-bold">
+            Featured Music
+          </div>        
+          <div class="card-body text-light">
+            <div class="col embed-responsive embed-responsive-16by9 mb-100">
+              <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/726909943&color=%23000000&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/magicthegathering" title="Magic: The Gathering" target="_blank" style="color: #cccccc; text-decoration: none;">Magic: The Gathering</a> · <a href="https://soundcloud.com/magicthegathering/magic-the-gathering-theros-beyond-death-trailer-music-by-ramin-djawadi" title="Magic: The Gathering - Theros Beyond Death Trailer Music by Ramin Djawadi" target="_blank" style="color: #cccccc; text-decoration: none;">Magic: The Gathering - Theros Beyond Death Trailer Music by Ramin Djawadi</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Footer -->
     <%- include('partials/footer'); %>
