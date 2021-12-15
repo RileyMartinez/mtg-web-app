@@ -68,16 +68,17 @@ a {
 }
 
 #container {
-	font-size: 4em;
+	font-size: 2.5em;
 	font-family: 'Cardo', serif;
 	text-align: center;
-  font-style: bold;
+  	font-style: bold;
 }
 
 #container2 {
   font-size: 2.5em;
 	font-family: 'Cardo', serif;
 	text-align: center;
+	font-style: bold;
 }
 
 .right { 

@@ -1,73 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title><%= title %></title>
-	  <%- include('partials/head'); %>
-  </head>
 
-  <body class="bg-secondary container-fluid">
-    <header class="content-wrapper">
-      <%- include('partials/nav'); %>
-    </header>
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <%- include('partials/head'); %>
+</head>
 
-    <p><br></p>
-    <div class="container">
-        <span class="iconify" data-icon="mdi:skull" style="color: rgb(233, 233, 233);" data-width="60" data-height="60"></span>
-        <h1 class="mb-3 text-warning font-weight-bold">Feedback</h1>
-        <div class="row">
-            <div class="col-md-12 mb-5">
-              <div class="card text-white bg-dark" id="feedbackcard">      
-                <div class="card-body text-center">
-                    <table id="table" class="table-striped border-primary text-white">
-                        <thead class="text-warning">
-                          <tr>
-                            <th data-field="email">
-                              <span class="text-light">
-                                Email
-                              </span>
-                            </th>
-                            <th data-field="feedback">
-                              <span class="text-light">
-                                Feedback
-                              </span>
-                            </th>
-                          </tr>
-                        </thead>
-                      </table>
-                </div>
-              </div>
-            </div>
+<body class="bg-secondary container-fluid">
+  <header class="content-wrapper">
+    <%- include('partials/nav'); %>
+  </header>
+
+  <p><br></p>
+  <div class="container">
+    <span class="iconify" data-icon="mdi:skull" style="color: rgb(233, 233, 233);" data-width="60"
+      data-height="60"></span>
+    <h1 class="mb-3 text-warning font-weight-bold">Feedback</h1>
+    <div class="row">
+      <div class="col-md-12 mb-5">
+        <div class="card text-white bg-dark" id="feedbackcard">
+          <div class="card-body text-center">
+            <table id="table" class="table-striped border-primary text-white">
+              <thead class="text-warning">
+                <tr>
+                  <th data-field="email">
+                    <span class="text-light">
+                      Email
+                    </span>
+                  </th>
+                  <th data-field="feedback">
+                    <span class="text-light">
+                      Feedback
+                    </span>
+                  </th>
+                </tr>
+              </thead>
+            </table>
           </div>
-
+        </div>
+      </div>
     </div>
+  </div>
 
-    <!-- Footer -->
-    <%- include('partials/footer'); %>
+  <!-- Footer -->
+  <%- include('partials/footer'); %>
 
-    <!-- Scripts -->
-    <%- include('partials/scripts'); %>
+  <!-- Scripts -->
+  <%- include('partials/scripts'); %>
 
-    <script type="text/javascript">
+      <script type="text/javascript">
         var feedbackData = JSON.parse('<%- feedbackData %>');
 
         $(document).ready(function () {
-            // Use the given data to create 
-            // the table and display it
-            $('#table').bootstrapTable({
-                pagination: true,
-                search: true,
-                columns:[{
-                    field: 'email',
-                    title: 'Email'
-                }, {
-                    field: 'feedback',
-                    title: "Feedback"
-                }],
-                data: feedbackData
-            });
+          // Use the given data to create 
+          // the table and display it
+          $('#table').bootstrapTable({
+            pagination: true,
+            search: true,
+            columns: [{
+              field: 'email',
+              title: 'Email'
+            }, {
+              field: 'feedback',
+              title: "Feedback"
+            }],
+            data: feedbackData
+          });
         });
-    </script>
-  
-  </body>
+      </script>
+
+</body>
 
 </html>

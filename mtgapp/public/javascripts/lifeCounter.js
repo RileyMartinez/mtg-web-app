@@ -35,40 +35,6 @@ function Reset() {
   }
 }
 
-/*
-function SubmitResult() {
-    if (YourCounter > EnemyCounter) {
-        incrementWins();
-        Reset();
-    } else {
-        incrementLosses();
-        Reset();
-    }
-}
-
-function incrementWins(req, res) {
-    findOne({_id:req.locals.currentUser.id},(err,doc)=>{
-        //this will give you the document what you want to update.. then 
-        doc.wins += 1; //so on and so forth
-    
-    // then save that document
-    doc.save(callback);
-    
-    });
-}
-
-    function incrementLosses(req, res) {
-        findOne({_id:req.locals.currentUser.id},(err,doc)=>{
-            //this will give you the document what you want to update.. then 
-            doc.losses += 1; //so on and so forth
-        
-        // then save that document
-        doc.save(callback);
-        
-        });
-
-}
-*/
 function prepareOnClicks() {
     document.getElementById('YourUp').onclick = function() { YourIncrease(); };
     document.getElementById('YourDown').onclick = function() { YourDecrease(); };
@@ -77,8 +43,6 @@ function prepareOnClicks() {
     document.getElementById('reset').onclick = function() { Reset(); };
     document.getElementById('commander').onclick = function() { SubmitResult(); };
 }
-
-
 
 window.onload = function() {
   prepareOnClicks();

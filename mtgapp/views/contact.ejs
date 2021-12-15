@@ -1,61 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title><%= title %></title>
-	  <%- include('partials/head'); %>
-  </head>
 
-  <body class="bg-secondary container-fluid">
-    <div class="container">
-        <header class="content-wrapper">
-            <%- include('partials/nav'); %>
-        </header>
-        <p><br></p>
-        <form id="feedback-form" action="/contact/feedback" method="POST" class="needs-validation" novalidate>
-          <span class="material-icons green md-96">park</span>
-            <h1 class="mb-3 text-warning font-weight-bold">Contact</h1>
-            <div class="mb-3">
-              <label for="inputEmail" class="sr-only">Email</label>
-              <input type="email" id="email" name="email" class="form-control" placeholder="Email" required autofocus>
-              <div class="valid-feedback">
-                Valid Email
-            </div>
-            <div class="invalid-feedback">
-                Invalid Email
-            </div>
-          </div>
-          <div class="mb-3">
-            <label for="textArea" class="sr-only">Feedback</label>
-            <textarea class="form-control" name="textArea" id="textArea" placeholder="Send a message" required></textarea>
-            <div class="invalid-feedback">
-              Feedback required to submit
-            </div>
-          </div>
-            <button class="btn btn-lg btn-dark btn-block mb-5" type="submit">Submit</button>
-        </form>
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <%- include('partials/head'); %>
+</head>
+
+<body class="bg-secondary container-fluid">
+  <div class="container">
+    <header class="content-wrapper">
+      <%- include('partials/nav'); %>
+    </header>
+    <p><br></p>
+    <form id="feedback-form" action="/contact/feedback" method="POST" class="needs-validation" novalidate>
+      <span class="material-icons green md-96">park</span>
+      <h1 class="mb-3 text-warning font-weight-bold">Contact</h1>
+      <div class="mb-3">
+        <label for="inputEmail" class="sr-only">Email</label>
+        <input type="email" id="email" name="email" class="form-control" placeholder="Email" required autofocus>
+        <div class="valid-feedback">
+          Valid Email
         </div>
-    <div class="container-fluid px-0 mb-90">
-      <div class="row">
-        <img class="w-100 img-fluid" src="/img/carousel_2.png">
+        <div class="invalid-feedback">
+          Invalid Email
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="textArea" class="sr-only">Feedback</label>
+        <textarea class="form-control" name="textArea" id="textArea" placeholder="Send a message" required></textarea>
+        <div class="invalid-feedback">
+          Feedback required to submit
+        </div>
+      </div>
+      <button class="btn btn-lg btn-dark btn-block mb-5" type="submit">Submit</button>
+    </form>
+  </div>
+  <div class="container-fluid px-0 mb-90">
+    <div class="row">
+      <img class="w-100 img-fluid" src="/img/carousel_2.png">
     </div>
-    </div>
-    <footer>
-        <%- include('partials/footer'); %>
-    </footer>
+  </div>
 
-</body>
+  <%- include('partials/footer'); %>
 
-<%- include('partials/scripts'); %>
+  <%- include('partials/scripts'); %>
 
-<script>
-  var canvas = document.getElementById('myCanvas');
-  var context = canvas.getContext('2d');
-  var imageObj = new Image();
+  <script>
+    var canvas = document.getElementById('myCanvas');
+    var context = canvas.getContext('2d');
+    var imageObj = new Image();
 
-  imageObj.onload = function () {
+    imageObj.onload = function () {
       context.drawImage(imageObj, 69, 50);
-  };
-  imageObj.src = '/img/kianne_dean_of_substance_art_card.png';
-</script>
+    };
+    imageObj.src = '/img/kianne_dean_of_substance_art_card.png';
+  </script>
+</body>
 
 </html>
